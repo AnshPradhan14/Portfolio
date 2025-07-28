@@ -91,6 +91,24 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Header */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+        <nav className="container mx-auto px-6 py-4">
+          <div className="flex justify-between items-center">
+            <div className="text-xl font-bold gradient-text font-orbitron">ANSH</div>
+            <div className="hidden md:flex space-x-8">
+              <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a>
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="#skills" className="text-muted-foreground hover:text-primary transition-colors">Skills</a>
+              <a href="#experience" className="text-muted-foreground hover:text-primary transition-colors">Experience</a>
+              <a href="#projects" className="text-muted-foreground hover:text-primary transition-colors">Projects</a>
+              <a href="#certifications" className="text-muted-foreground hover:text-primary transition-colors">Certifications</a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-cyber-darker via-cyber-dark to-background"></div>
@@ -143,13 +161,13 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
 
       <div className={`relative z-10 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
         {/* Hero Section */}
-        <section className="min-h-screen flex items-center justify-center px-6">
+        <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
           <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-slide-up">
               <h1 className="text-6xl lg:text-8xl font-bold gradient-text font-orbitron">
                 ANSH<br />PRADHAN
               </h1>
-              <div className="typewriter text-xl lg:text-2xl text-muted-foreground">
+              <div className="text-xl lg:text-2xl text-muted-foreground">
                 AI & ML Enthusiast | Computer Engineering Student
               </div>
               <p className="text-lg text-muted-foreground max-w-xl">
@@ -182,7 +200,7 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
         </section>
 
         {/* About Section */}
-        <section className="py-20 px-6">
+        <section id="about" className="py-20 px-6">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 neon-text font-orbitron">
               ABOUT ME
@@ -214,10 +232,10 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
         </section>
 
         {/* Skills Section */}
-        <section className="py-20 px-6 overflow-hidden">
+        <section id="skills" className="py-20 px-6 overflow-hidden">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 neon-text font-orbitron">
-              SKILLS & TECHNOLOGIES
+              SKILLS
             </h2>
             <div className="relative">
               <div className="flex animate-[scroll_20s_linear_infinite] gap-6">
@@ -235,7 +253,7 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
         </section>
 
         {/* Experience Section */}
-        <section className="py-20 px-6">
+        <section id="experience" className="py-20 px-6">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 neon-text font-orbitron">
               EXPERIENCE
@@ -263,20 +281,74 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
           </div>
         </section>
 
+        {/* Projects Section */}
+        <section id="projects" className="py-20 px-6">
+          <div className="container mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 neon-text font-orbitron">
+              PROJECTS
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  title: "AI Image Classification",
+                  description: "Deep learning model for image recognition using TensorFlow and CNN",
+                  tech: ["Python", "TensorFlow", "OpenCV", "Streamlit"],
+                  link: "#"
+                },
+                {
+                  title: "Smart City Analytics",
+                  description: "IoT data analysis dashboard for urban planning and management",
+                  tech: ["Python", "Power BI", "SQL", "React"],
+                  link: "#"
+                },
+                {
+                  title: "ML Stock Predictor",
+                  description: "Machine learning model for stock price prediction using LSTM",
+                  tech: ["Python", "PyTorch", "Pandas", "NumPy"],
+                  link: "#"
+                }
+              ].map((project, index) => (
+                <Card key={index} className="cyber-card group hover:scale-105 transition-transform">
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-bold gradient-text">{project.title}</h3>
+                    <p className="text-muted-foreground">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech, i) => (
+                        <span key={i} className="px-2 py-1 bg-primary/20 text-primary text-sm rounded-md">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                    <Button variant="outline" className="w-full cyber-glow">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      View Project
+                    </Button>
+                  </div>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Certifications Section */}
-        <section className="py-20 px-6">
+        <section id="certifications" className="py-20 px-6">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 neon-text font-orbitron">
               CERTIFICATIONS
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {certifications.map((cert, index) => (
-                <Card key={index} className="cyber-card group hover:scale-105 transition-transform">
+                <Card 
+                  key={index} 
+                  className="cyber-card group hover:scale-105 transition-transform cursor-pointer"
+                  onClick={() => window.open('#', '_blank')}
+                >
                   <div className="text-center">
                     <div className="w-16 h-16 bg-gradient-to-r from-cyber-pink to-cyber-cyan rounded-full mx-auto mb-4 flex items-center justify-center">
                       <ExternalLink className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="font-semibold text-lg">{cert}</h3>
+                    <p className="text-sm text-muted-foreground mt-2">Click to view credential</p>
                   </div>
                 </Card>
               ))}
@@ -285,7 +357,7 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-6">
+        <section id="contact" className="py-20 px-6">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-center mb-12 neon-text font-orbitron">
               GET IN TOUCH
