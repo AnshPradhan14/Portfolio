@@ -34,11 +34,18 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
           currentChar++;
           setTimeout(typeWriter, 50);
         } else {
-          setTerminalText(prev => prev + "\n");
+          if (currentLine < terminalLines.length - 1) {
+            setTerminalText(prev => prev + "\n");
+          }
           currentLine++;
           currentChar = 0;
           setTimeout(typeWriter, 500);
         }
+      } else {
+        // Hide terminal after animation completes
+        setTimeout(() => {
+          setTerminalText("");
+        }, 2000);
       }
     };
 
