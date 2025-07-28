@@ -14,6 +14,7 @@ interface PortfolioProps {
 const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
   const [terminalText, setTerminalText] = useState("");
   const [isVisible, setIsVisible] = useState(false);
+  const [showHeaderName, setShowHeaderName] = useState(false);
 
   const terminalLines = [
     "Initializing Portfolio...",
@@ -52,6 +53,27 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
     const timer = setTimeout(typeWriter, 1000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Intersection Observer for hero title visibility
+  useEffect(() => {
+    const heroTitle = document.querySelector('h1');
+    if (!heroTitle) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // Show header name when hero title is out of view
+        setShowHeaderName(!entry.isIntersecting);
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '-100px 0px 0px 0px'
+      }
+    );
+
+    observer.observe(heroTitle);
+
+    return () => observer.disconnect();
+  }, [isVisible]);
 
   const skills = [
     "Python", "Machine Learning", "Deep Learning", "TensorFlow", "PyTorch", 
@@ -95,7 +117,11 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-xl font-bold gradient-text font-orbitron">ANSH</div>
+            <div className={`text-xl font-bold gradient-text font-orbitron transition-all duration-300 ${
+              showHeaderName ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform -translate-y-2'
+            }`}>
+              ANSH
+            </div>
             <div className="hidden md:flex space-x-8">
               <a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a>
               <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
