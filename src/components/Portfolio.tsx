@@ -28,7 +28,7 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
     "Initializing Portfolio...",
     "Loading AI & ML expertise...",
     "Connecting neural networks...",
-    "System ready. Welcome to Ansh's world.",
+    "System ready. Welcome to Portfolio.",
   ];
 
   useEffect(() => {
@@ -384,7 +384,7 @@ Enhanced ability to transform complex datasets into clear, interactive reports, 
                   title: "Chatur AI - Chatbot",
                   description: "A smart RAG chatbot for students that provides context-aware answers from PDFs, URLs and general knowledge using Groq LLM. Deployed on Telegram and Streamlit.",
                   tech: ["RAG", "LangChain", "LLM", "Streamlit"],
-                  link: "https://github.com/AnshPradhan14/chatur_ai"
+                  link: "https://github.com/AnshPradhan14/Chatur_AI"
                 },
                 {
                   title: "Age & Gender Detection",
