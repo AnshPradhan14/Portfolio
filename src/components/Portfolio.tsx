@@ -342,7 +342,7 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
                 AI/ML Engineer | LLM, RAG & Intelligent Systems
               </div>
               <p className="text-lg text-muted-foreground max-w-xl">
-                Focused on building practical AI applications from RAG-based assistants and ML models to data-driven systems that turn complex data into useful insights.
+                Focused on building practical AI applications from AI Agents, RAG-based assistants and ML models to data-driven systems that turn complex data into useful insights.
               </p>
               <div className="flex gap-4">
                 <Button className="cyber-glow">
