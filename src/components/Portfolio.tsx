@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Moon, Sun, Github, Linkedin, Mail, ExternalLink, Download } from "lucide-react";
 import anshProfile from "@/assets/ansh-profile.jpg";
+import resumePdf from "@/assets/Ansh AIML Resume.pdf";
+
 
 interface PortfolioProps {
   isDark: boolean;
@@ -345,9 +347,11 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
                 Focused on building practical AI applications from AI Agents, RAG-based assistants and ML models to data-driven systems that turn complex data into useful insights.
               </p>
               <div className="flex gap-4">
-                <Button className="cyber-glow">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download CV
+                <Button className="cyber-glow" asChild>
+                  <a href={resumePdf} download="Ansh_AIML_Resume.pdf">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download CV
+                  </a>
                 </Button>
                 <Button variant="outline" className="neon-border" asChild>
                   <a href="#contact">
