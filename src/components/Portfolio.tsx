@@ -578,17 +578,17 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
                   the latest in AI and tech. If it involves code, data, or even a good meme about machine learning, I’m in!
                 </p>
                 <div className="flex gap-4">
-                  <Button variant="outline" size="icon" className="cyber-glow" asChild>
+                  <Button variant="outline" size="icon" className="cyber-glow" asChild aria-label="Github Profile">
                     <a href="https://github.com/AnshPradhan14" target="_blank" rel="noopener noreferrer">
                       <Github className="h-5 w-5" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" className="cyber-glow" asChild>
+                  <Button variant="outline" size="icon" className="cyber-glow" asChild aria-label="LinkedIn Profile">
                     <a href="https://www.linkedin.com/in/anshpradhan14/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-5 w-5" />
                     </a>
                   </Button>
-                  <Button variant="outline" size="icon" className="cyber-glow" asChild>
+                  <Button variant="outline" size="icon" className="cyber-glow" asChild aria-label="Send Email">
                     <a href="mailto:anshpradhan911@gmail.com">
                       <Mail className="h-5 w-5" />
                     </a>
