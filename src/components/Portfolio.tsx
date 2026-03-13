@@ -253,13 +253,14 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
 
   const certifications = [
     { name: "SAP Advanced Course", link: "https://www.linkedin.com/posts/anshpradhan14_sap-advance-course-certificate-activity-7322645324949286912-3f6R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEwVV58BEuOIWLRklLAUNRR4VGjC64-1BHA" },
-    { name: "Machine Learning with Python", link: "https://coursera.org/verify/H9YYEE2TZ6CS" },
-    { name: "Keras & TensorFlow", link: "https://coursera.org/verify/00HJO3U5G4J7" },
-
-    { name: "Deep Learning & Neural Networks", link: "https://www.coursera.org/account/accomplishments/verify/TU031Q7S8QBL" },
-    { name: "PyTorch with Neural Networks ", link: "https://www.coursera.org/account/accomplishments/verify/MUDT35MGZ4TN" },
+    { name: "5-Day AI Agents Intensive Course", link: "https://www.kaggle.com/certification/badges/anshpradhan02/105" },
     { name: "Edunet - Artificial Intelligence", link: "https://skills.yourlearning.ibm.com/certificate/share/fc8f526d84ewogICJvYmplY3RJZCIgOiAiUExBTi04QTQ4NjQ1MTk2RkEiLAogICJsZWFybmVyQ05VTSIgOiAiNTAwMjI4NVJFRyIsCiAgIm9iamVjdFR5cGUiIDogIkFDVElWSVRZIgp939a94e05c2-10" },
 
+    { name: "Machine Learning with Python", link: "https://coursera.org/verify/H9YYEE2TZ6CS" },
+    { name: "Keras & TensorFlow", link: "https://coursera.org/verify/00HJO3U5G4J7" },
+    { name: "Deep Learning & Neural Networks", link: "https://www.coursera.org/account/accomplishments/verify/TU031Q7S8QBL" },
+
+    { name: "PyTorch with Neural Networks ", link: "https://www.coursera.org/account/accomplishments/verify/MUDT35MGZ4TN" },
     { name: "Python for Data Science, AI & Development", link: "https://coursera.org/verify/THBDIEY5ZJ6C" },
     { name: "Data Visualization", link: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/ifobHAoMjQs9s6bKS/MyXvBcppsW2FkNYCX_ifobHAoMjQs9s6bKS_Y3c9Wm4qLnPtiXxZn_1748528358811_completion_certificate.pdf" },
 
