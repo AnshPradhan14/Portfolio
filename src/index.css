@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cyberpunk Color Palette */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 291 100% 70%;
+    --primary-foreground: 240 10% 3.9%;
+
+    --secondary: 271 81% 56%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 180 100% 70%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
+    --ring: 291 100% 70%;
+
+    --glow-pink:   0 0 20px rgba(232, 102, 255, 0.6), 0 0 60px rgba(232, 102, 255, 0.2);
+    --glow-cyan:   0 0 20px rgba(102, 255, 255, 0.6), 0 0 60px rgba(102, 255, 255, 0.2);
+    --glow-purple: 0 0 20px rgba(140, 52, 232, 0.5);
+    --gradient-card: linear-gradient(135deg, rgba(232,102,255,0.04) 0%, rgba(102,255,255,0.02) 100%);
+    --gradient-text-primary: linear-gradient(135deg, #E866FF 0%, #8C34E8 50%, #66FFFF 100%);
+    --gradient-cta: linear-gradient(90deg, #E866FF 0%, #8C34E8 100%);
+    --grid-line: rgba(232, 102, 255, 0.07);
+    --scanline: rgba(0, 0, 0, 0.15);
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cyber-darker text-cyber-light font-rajdhani overflow-x-hidden;
+  }
+
+  h1, h2, h3, h4 { 
+    font-family: 'Orbitron', sans-serif; 
+    letter-spacing: 0.08em; 
+    text-transform: uppercase; 
+  }
+  
+  body, p, span, li, a { 
+    font-family: 'Rajdhani', sans-serif; 
+  }
+
+  ::selection {
+    background: rgba(232, 102, 255, 0.3);
+    color: #F2F2F5;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #030305;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(232, 102, 255, 0.3);
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(232, 102, 255, 0.6);
+  }
+}
