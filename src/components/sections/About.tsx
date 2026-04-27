@@ -80,7 +80,7 @@ export function About() {
             <motion.div variants={fadeInUp} className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 { number: "4+", label: "Internships" },
-                { number: "6+", label: "Projects Built" },
+                { number: "9+", label: "Projects Built" },
                 { number: "9+", label: "Certifications" }
               ].map((stat, i) => (
                 <CyberCard key={i} className="p-4 text-center hover:-translate-y-1 transition-transform border border-white/5">
