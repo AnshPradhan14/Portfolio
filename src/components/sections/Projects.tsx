@@ -36,19 +36,19 @@ const projects = [
   },
   {
     id: "p3",
-    title: "Age & Gender Detection",
-    description: "A high-performance computer vision system that performs real-time demographic analysis using deep learning, leveraging OpenCV for facial recognition. Features optimized CNN architectures to accurately predict age ranges and gender from live camera feeds or static images with low-latency inference.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
-    tags: ["CNN", "VGG 16", "TensorFlow", "Computer Vision"],
+    title: "ContractGuard Agent",
+    description: "An autonomous legal AI system designed to streamline complex contract review and vendor negotiation through a specialized multi-agent architecture. By integrating the Gemini API with advanced state management orchestration, it seamlessly reads vendor agreements, cross-references them against internal policies, and meticulously flags high-risk clauses. This creates immense business value by drastically accelerating legal workflows, ensuring strict corporate compliance, and automatically drafting strategic negotiation responses.",
+    image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?q=80&w=800&auto=format&fit=crop",
+    tags: ["Multi-Agent", "Gemini API", "State Management", "Python"],
     category: "AI",
-    featured: false,
-    stats: "◈ Deep Learning · ⟳ Real-time",
-    github: "https://github.com/AnshPradhan14/Age-and-Gender-Prediction",
+    featured: true,
+    stats: "✦ Legal Automation · ⚬ AI Negotiator",
+    github: "https://github.com/AnshPradhan14/ContractGuard-Agent",
     demo: ""
   },
   {
     id: "p4",
-    title: "Resume Parser Analyzer",
+    title: "Resume Parser",
     description: "An intelligent recruiting automation tool utilizing NLP and OCR (Tesseract & PyMuPDF) to seamlessly extract and categorize key candidate intelligence from unstructured resumes. This significantly accelerates the talent acquisition pipeline by eliminating manual applicant screening, allowing HR to focus entirely on high-impact candidate engagement.",
     image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?q=80&w=800&auto=format&fit=crop",
     tags: ["NLP", "Python", "Tesseract OCR", "PyMuPDF"],
@@ -59,6 +59,18 @@ const projects = [
   },
   {
     id: "p5",
+    title: "Age & Gender Prediction",
+    description: "A high-performance computer vision system that performs real-time demographic analysis using deep learning, leveraging OpenCV for facial recognition. Features optimized CNN architectures to accurately predict age ranges and gender from live camera feeds or static images with low-latency inference.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    tags: ["CNN", "VGG 16", "TensorFlow", "Computer Vision"],
+    category: "AI",
+    featured: false,
+    stats: "◈ Deep Learning · ⟳ Real-time",
+    github: "https://github.com/AnshPradhan14/Age-and-Gender-Prediction",
+    demo: ""
+  },
+  {
+    id: "p6",
     title: "Restaurant Data Analysis & Prediction",
     description: "An end-to-end data science project that performs deep exploratory data analysis and predictive modeling on restaurant datasets. It leverages machine learning to identify key success factors, visualize dining trends, and predict restaurant ratings based on location, cuisine, and cost.",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop",
@@ -68,7 +80,7 @@ const projects = [
     github: "https://github.com/AnshPradhan14/Restaurant-Data-Analysis-and-Prediction"
   },
   {
-    id: "p6",
+    id: "p7",
     title: "International Space Station Tracker",
     description: "A comprehensive ISS tracking system with real-time spatiotemporal data pipeline and interactive web dashboard to analyze ISS trajectories and predict visibility windows using geospatial data processing.",
     image: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=800&auto=format&fit=crop",
@@ -78,7 +90,7 @@ const projects = [
     github: "https://github.com/AnshPradhan14/ISA_internship/tree/main/Project%203"
   },
   {
-    id: "p7",
+    id: "p8",
     title: "Stock-Price Prediction",
     description: "A financial forecasting tool that utilizes Time Series Analysis and Deep Learning to predict future stock market trends by extracting historical data using the YFinance API. It implements LSTM or GRU architectures to capture temporal dependencies in historical price data, providing automated trend visualization for traders.",
     image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800&auto=format&fit=crop",
@@ -88,7 +100,7 @@ const projects = [
     github: "https://github.com/AnshPradhan14/Stock-Price-prediction"
   },
   {
-    id: "p8",
+    id: "p9",
     title: "21 Days - 21 Projects Challenge",
     description: "A comprehensive project series documenting 21 days of continuous innovation, building diverse AI and data-driven applications. This repository showcases rapid prototyping skills, consistent development habits, and a wide-ranging technical versatility across various domains.",
     image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop",

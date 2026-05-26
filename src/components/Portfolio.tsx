@@ -488,7 +488,19 @@ const Portfolio = ({ isDark, toggleTheme }: PortfolioProps) => {
                   link: "https://github.com/AnshPradhan14/Chatur_AI"
                 },
                 {
-                  title: "Age & Gender Detection",
+                  title: "ContractGuard Agent",
+                  description: "An autonomous legal AI system designed to streamline complex contract review and vendor negotiation through a specialized multi-agent architecture. By integrating the Gemini API with advanced state management orchestration, it seamlessly reads vendor agreements, cross-references them against internal policies, and meticulously flags high-risk clauses. This creates immense business value by drastically accelerating legal workflows, ensuring strict corporate compliance, and automatically drafting strategic negotiation responses.",
+                  tech: ["Multi-Agent", "Gemini API", "State Management", "Python"],
+                  link: "https://github.com/AnshPradhan14/ContractGuard-Agent"
+                },
+                {
+                  title: "Resume Parser",
+                  description: "An intelligent recruiting automation tool utilizing NLP and OCR (Tesseract & PyMuPDF) to seamlessly extract and categorize key candidate intelligence from unstructured resumes. This significantly accelerates the talent acquisition pipeline by eliminating manual applicant screening, allowing HR to focus entirely on high-impact candidate engagement.",
+                  tech: ["NLP", "Python", "Tesseract OCR", "PyMuPDF"],
+                  link: "https://github.com/AnshPradhan14/Resume-Parser"
+                },
+                {
+                  title: "Age & Gender Prediction",
                   description: "A high-performance computer vision system that performs real-time demographic analysis using deep learning, leveraging OpenCV for facial recognition. Features optimized CNN architectures to accurately predict age ranges and gender from live camera feeds or static images with low-latency inference.",
                   tech: ["CNN", "VGG 16", "TensorFlow", "Computer Vision"],
                   link: "https://github.com/AnshPradhan14/Age-and-Gender-Prediction"
