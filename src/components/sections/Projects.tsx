@@ -58,6 +58,18 @@ const projects = [
     github: "https://github.com/AnshPradhan14/Resume-Parser"
   },
   {
+    id: "p10",
+    title: "AeroMind: Predictive Maintenance Platform",
+    description: "An end-to-end predictive maintenance platform analyzing NASA C-MAPSS telemetry data. It leverages Machine Learning and Explainable AI to predict the Remaining Useful Life (RUL) of aircraft engines, detect real-time anomalies, and generate proactive maintenance protocols using LLMs.",
+    image: "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=800&auto=format&fit=crop",
+    tags: ["LightGBM", "Llama-3", "SHAP", "ETL"],
+    category: "Data Science",
+    featured: false,
+    stats: "◈ Predictive AI · ⟳ Real-time",
+    github: "https://github.com/AnshPradhan14/AeroMind",
+    demo: "#"
+  },
+  {
     id: "p5",
     title: "Age & Gender Prediction",
     description: "A high-performance computer vision system that performs real-time demographic analysis using deep learning, leveraging OpenCV for facial recognition. Features optimized CNN architectures to accurately predict age ranges and gender from live camera feeds or static images with low-latency inference.",
@@ -117,8 +129,8 @@ export function Projects() {
   const [filter, setFilter] = useState("All");
 
   const categories = ["All", "AI", "Data Science"];
-  
-  const displayedProjects = activeTab === "Featured" 
+
+  const displayedProjects = activeTab === "Featured"
     ? projects.filter(p => p.featured)
     : projects.filter(p => filter === "All" || p.category === filter);
 
@@ -129,8 +141,8 @@ export function Projects() {
 
         <div ref={ref}>
           {/* Main Tabs */}
-          <motion.div 
-            variants={fadeInUp} 
+          <motion.div
+            variants={fadeInUp}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             className="flex justify-center mb-12"
@@ -141,8 +153,8 @@ export function Projects() {
                   key={tab}
                   className={cn(
                     "px-6 py-2 rounded-full font-orbitron text-sm font-semibold transition-all duration-300",
-                    activeTab === tab 
-                      ? "bg-gradient-to-r from-cyber-pink to-cyber-purple text-white shadow-[0_0_15px_rgba(232,102,255,0.4)]" 
+                    activeTab === tab
+                      ? "bg-gradient-to-r from-cyber-pink to-cyber-purple text-white shadow-[0_0_15px_rgba(232,102,255,0.4)]"
                       : "text-cyber-light/60 hover:text-white"
                   )}
                   onClick={() => setActiveTab(tab)}
@@ -156,7 +168,7 @@ export function Projects() {
           {/* Sub Filters for All Projects */}
           <AnimatePresence>
             {activeTab === "All Projects" && (
-              <motion.div 
+              <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
@@ -174,7 +186,7 @@ export function Projects() {
           </AnimatePresence>
 
           {/* Projects Grid */}
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
@@ -199,88 +211,88 @@ export function Projects() {
                       "flex h-full w-full",
                       activeTab === "Featured" ? "flex-col md:flex-row relative" : "flex-col"
                     )}>
-                    {/* Featured Decorative Line */}
-                    {activeTab === "Featured" && (
-                      <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyber-pink to-cyber-cyan z-20" />
-                    )}
-
-                    {/* Image Area */}
-                    <div 
-                      className={cn(
-                        "relative bg-cyber-dark overflow-hidden",
-                        activeTab === "Featured" ? "w-full md:w-[40%] min-h-[250px] md:min-h-full" : "w-full h-[180px]"
-                      )}
-                    >
-                      {/* CSS Gradient Mesh */}
-                      <div className="absolute inset-0 opacity-40 mix-blend-screen overflow-hidden pointer-events-none">
-                        <div className="absolute w-[300px] h-[300px] bg-cyber-pink/30 rounded-full blur-[80px] -top-20 -left-20 animate-[spin_10s_linear_infinite]" />
-                        <div className="absolute w-[200px] h-[200px] bg-cyber-cyan/30 rounded-full blur-[60px] bottom-10 right-10 animate-[spin_8s_linear_infinite_reverse]" />
-                      </div>
-                      
-                      {project.image && (
-                        <img 
-                          src={project.image} 
-                          alt={project.title} 
-                          className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-70 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal"
-                        />
-                      )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-cyber-darker via-transparent to-transparent opacity-80" />
-                      
+                      {/* Featured Decorative Line */}
                       {activeTab === "Featured" && (
-                        <div className="absolute bottom-4 left-6 z-10 font-orbitron font-bold text-2xl text-white/90 drop-shadow-md">
-                          {`0${i + 1}`}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Content Area */}
-                    <div 
-                      className={cn(
-                        "flex flex-col flex-1 p-6 z-10 bg-black/20 backdrop-blur-sm",
-                        activeTab === "Featured" ? "w-full md:w-[60%]" : "w-full"
-                      )}
-                    >
-                      <h3 className="font-orbitron font-bold text-xl md:text-2xl gradient-text mb-3">
-                        {project.title}
-                      </h3>
-                      
-                      <p className="font-rajdhani text-cyber-light/70 text-sm md:text-[15px] leading-relaxed mb-6 flex-1">
-                        {project.description}
-                      </p>
-
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.tags.map(tag => (
-                          <span key={tag} className="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] font-orbitron text-cyber-light/80 uppercase tracking-wider">
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-
-                      {project.stats && (
-                        <div className="font-orbitron text-[10px] text-cyber-cyan tracking-widest uppercase mb-6 bg-cyber-cyan/5 px-3 py-1.5 rounded inline-block w-fit border border-cyber-cyan/20">
-                          {project.stats}
-                        </div>
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyber-pink to-cyber-cyan z-20" />
                       )}
 
-                      <div className="flex items-center gap-3 mt-auto pt-4 border-t border-white/5">
-                        {project.demo && (
-                          <CyberButton asChild className="px-5 py-2 text-xs">
-                            <a href={project.demo} target="_blank" rel="noreferrer">
-                              View Live <ExternalLink size={14} className="ml-1" />
-                            </a>
-                          </CyberButton>
+                      {/* Image Area */}
+                      <div
+                        className={cn(
+                          "relative bg-cyber-dark overflow-hidden",
+                          activeTab === "Featured" ? "w-full md:w-[40%] min-h-[250px] md:min-h-full" : "w-full h-[180px]"
                         )}
-                        {project.github && (
-                          <CyberButton variant="ghost" asChild className="px-4 py-2 text-xs flex-1 md:flex-none">
-                            <a href={project.github} target="_blank" rel="noreferrer">
-                              GitHub <Github size={14} className="ml-1" />
-                            </a>
-                          </CyberButton>
+                      >
+                        {/* CSS Gradient Mesh */}
+                        <div className="absolute inset-0 opacity-40 mix-blend-screen overflow-hidden pointer-events-none">
+                          <div className="absolute w-[300px] h-[300px] bg-cyber-pink/30 rounded-full blur-[80px] -top-20 -left-20 animate-[spin_10s_linear_infinite]" />
+                          <div className="absolute w-[200px] h-[200px] bg-cyber-cyan/30 rounded-full blur-[60px] bottom-10 right-10 animate-[spin_8s_linear_infinite_reverse]" />
+                        </div>
+
+                        {project.image && (
+                          <img
+                            src={project.image}
+                            alt={project.title}
+                            className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-105 group-hover:opacity-70 transition-all duration-700 mix-blend-luminosity hover:mix-blend-normal"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-cyber-darker via-transparent to-transparent opacity-80" />
+
+                        {activeTab === "Featured" && (
+                          <div className="absolute bottom-4 left-6 z-10 font-orbitron font-bold text-2xl text-white/90 drop-shadow-md">
+                            {`0${i + 1}`}
+                          </div>
                         )}
                       </div>
+
+                      {/* Content Area */}
+                      <div
+                        className={cn(
+                          "flex flex-col flex-1 p-6 z-10 bg-black/20 backdrop-blur-sm",
+                          activeTab === "Featured" ? "w-full md:w-[60%]" : "w-full"
+                        )}
+                      >
+                        <h3 className="font-orbitron font-bold text-xl md:text-2xl gradient-text mb-3">
+                          {project.title}
+                        </h3>
+
+                        <p className="font-rajdhani text-cyber-light/70 text-sm md:text-[15px] leading-relaxed mb-6 flex-1">
+                          {project.description}
+                        </p>
+
+                        <div className="flex flex-wrap gap-2 mb-6">
+                          {project.tags.map(tag => (
+                            <span key={tag} className="px-2 py-1 rounded bg-white/5 border border-white/10 text-[10px] font-orbitron text-cyber-light/80 uppercase tracking-wider">
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        {project.stats && (
+                          <div className="font-orbitron text-[10px] text-cyber-cyan tracking-widest uppercase mb-6 bg-cyber-cyan/5 px-3 py-1.5 rounded inline-block w-fit border border-cyber-cyan/20">
+                            {project.stats}
+                          </div>
+                        )}
+
+                        <div className="flex items-center gap-3 mt-auto pt-4 border-t border-white/5">
+                          {project.demo && (
+                            <CyberButton asChild className="px-5 py-2 text-xs">
+                              <a href={project.demo} target="_blank" rel="noreferrer">
+                                View Live <ExternalLink size={14} className="ml-1" />
+                              </a>
+                            </CyberButton>
+                          )}
+                          {project.github && (
+                            <CyberButton variant="ghost" asChild className="px-4 py-2 text-xs flex-1 md:flex-none">
+                              <a href={project.github} target="_blank" rel="noreferrer">
+                                GitHub <Github size={14} className="ml-1" />
+                              </a>
+                            </CyberButton>
+                          )}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </CyberCard>
+                  </CyberCard>
                 </motion.div>
               ))}
             </AnimatePresence>
