@@ -125,11 +125,12 @@ export const ChatBot: React.FC = () => {
                 </div>
               ) : (
                 <div className="flex flex-col">
-                  {messages.map((msg) => (
-                    <ChatMessage key={msg.id} message={msg} />
-                  ))}
+                  {messages.map((msg) => {
+                    if (msg.role === 'assistant' && !msg.content) return null;
+                    return <ChatMessage key={msg.id} message={msg} />;
+                  })}
 
-                  {isLoading && (
+                  {isLoading && (!messages.length || messages[messages.length - 1].role === 'user' || !messages[messages.length - 1].content) && (
                     <motion.div
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
