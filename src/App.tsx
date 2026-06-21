@@ -20,6 +20,7 @@ import { Projects } from './components/sections/Projects';
 import { Experience } from './components/sections/Experience';
 import { Contact } from './components/sections/Contact';
 import { Footer } from './components/sections/Footer';
+import { ChatBot } from './components/chatbot/ChatBot';
 
 function App() {
   const [bootComplete, setBootComplete] = useState(() => {
@@ -58,6 +59,7 @@ function App() {
             <GlowDivider />
             <Contact />
             <Footer />
+            <ChatBot />
           </motion.main>
         )}
       </AnimatePresence>
