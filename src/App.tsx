@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 
 // Background & Effects
 import { CyberGrid } from './components/background/CyberGrid';
@@ -63,6 +64,7 @@ function App() {
           </motion.main>
         )}
       </AnimatePresence>
+      <Analytics />
     </>
   );
 }
