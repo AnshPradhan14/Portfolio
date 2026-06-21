@@ -14,7 +14,7 @@ export const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  
+
   const { messages, isLoading, error, sendMessage } = useChat();
 
   const scrollToBottom = () => {
@@ -89,11 +89,11 @@ export const ChatBot: React.FC = () => {
                     ARIA
                   </h3>
                   <p className="font-rajdhani text-xs text-cyber-light/50 flex items-center gap-1">
-                    <Zap size={10} className="text-yellow-400" /> Powered by Groq
+                    <Zap size={10} className="text-yellow-400" /> Ansh's Responsive Intelligence Assistant
                   </p>
                 </div>
               </div>
-              <button 
+              <button
                 onClick={() => setIsOpen(false)}
                 className="p-2 rounded-full hover:bg-white/5 text-cyber-light/60 hover:text-white transition-colors"
               >
@@ -110,7 +110,7 @@ export const ChatBot: React.FC = () => {
                   <p className="font-rajdhani text-cyber-light/60 text-sm max-w-[80%] mb-8">
                     I am ARIA. How can I assist you with Ansh's portfolio?
                   </p>
-                  
+
                   <div className="flex flex-col gap-2 w-full max-w-[90%]">
                     {SUGGESTED_QUERIES.map((query, i) => (
                       <button
@@ -128,10 +128,10 @@ export const ChatBot: React.FC = () => {
                   {messages.map((msg) => (
                     <ChatMessage key={msg.id} message={msg} />
                   ))}
-                  
+
                   {isLoading && (
-                    <motion.div 
-                      initial={{ opacity: 0 }} 
+                    <motion.div
+                      initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       className="flex items-center gap-2 text-cyber-cyan/60 ml-2 mt-2"
                     >
@@ -143,7 +143,7 @@ export const ChatBot: React.FC = () => {
                       </div>
                     </motion.div>
                   )}
-                  
+
                   {error && (
                     <div className="text-center p-3 mt-4 rounded-lg bg-red-500/10 border border-red-500/30 text-red-400 font-rajdhani text-sm">
                       {error}
