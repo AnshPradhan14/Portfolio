@@ -45,7 +45,7 @@ export function Contact() {
     };
 
     try {
-      const response = await fetch('https://discordapp.com/api/webhooks/1479474596859088896/OvJ8zGtBfAEadnZjvXvonkHNp-vPxYDlpFwUO4xU7dGFWPJIWamqJGj1Dbo_j88qgP0w', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
